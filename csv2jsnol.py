@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1X4Y-ZU0XWdYOWggh9K09brxxzoOC2Udo
 """
 
-!pip install -U openai
-
 import pandas as pd
 df = pd.read_csv("Validation Data GPT.csv")
 df.head()
@@ -33,12 +31,6 @@ converted_data = convert_to_gpt35_format(dataset)
 converted_data[0]['messages']
 
 import json
-#json.loads(converted_data[0]['messages'][-1]['content'])
-
-from sklearn.model_selection import train_test_split
-
-# Stratified splitting. Assuming 'Top Category' can be used for stratification
-#train_data, val_data = train_test_split(converted_data,test_size=0.1,stratify=dataset['Output'], random_state=2  # for reproducibility)
 
 def write_to_jsonl(data, file_path):
     with open(file_path, 'w') as file:
@@ -50,6 +42,4 @@ training_file_name = "converted_data.jsonl"
 
 write_to_jsonl(converted_data, training_file_name)
 
-from openai import OpenAI
-client = OpenAI(api_key="")
 
