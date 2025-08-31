@@ -1,4 +1,4 @@
-The python script allows for the creation of a .jsnol file from a .CSV with paramters compatible for GPT fine tuning. The instructions for using the same are as follows:
+The python script allows for the creation of a .jsnol file from a .CSV with parameters compatible for GPT fine tuning. The instructions for using the same are as follows:
 
 step1 - build a .CSV file with three columns corresponding to the input from user,expected output from model and system prompt 
 (sample .csv - https://docs.google.com/spreadsheets/d/1TcqFX9MIL1p7K6W5FRsFLww0i1bgyS00pfNqFlaeWbc/edit?usp=sharing) Do this for both the test and validation dataset.
